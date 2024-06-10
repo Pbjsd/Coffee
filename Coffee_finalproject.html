@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>☕️ Coffee ☕️</title>
+    <style>
+        body {
+            background: linear-gradient(197deg, rgb(253, 140, 14) 0%, rgb(139, 102, 241) 100%);
+            color: #fff; 
+            width: 50%; 
+            margin: 60px auto; 
+            font-family: "Cerebri Sans", Helvetica, Arial, sans-serif;
+        }
+        h1 {
+            text-align: center; 
+            border: 1px solid #fff; 
+            padding: 20px; 
+            border-radius: 4px; 
+        }
+        h2 {
+            text-align: center;
+        }
+        img {
+            display: block;
+            margin: 0 auto; 
+            margin-top: 2em;        
+        }
+        p {
+            line-height: 1.5;
+            font-size: 24px;
+            margin-bottom: 1em;
+        }
+        button {
+            background: rgba(0, 0, 0, 0.87);
+            border: none;
+            font-size: 30px;
+            box-shadow: 10px 5px 5px black;
+            font-weight: 500px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            color: #fff; 
+            display: block;
+            padding: 10px 20px; 
+            margin: 30px auto; 
+            transition: opacity 150ms ease;
+            cursor: pointer; 
+            opacity: 1; 
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        a {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>I love coffee!</h1>
+    <h2>A little bio on my favorite drink</h2>
+    <hr />
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/128/320/original/coffeecup.jpeg?1717699150" alt="coffee" width="500">
+    <div>
+    <p>
+        <span><strong>Coffee</strong> is a beverage brewed from roasted coffee beans. Darkly colored, bitter, and slightly acidic, coffee has a stimulating effect on humans, primarily due to its caffeine content. It has the <em>highest</em> sales in the world market for hot drinks.</span>
+    </p>
+    <small
+    ><a 
+        href="https://en.wikipedia.org/wiki/Coffee"
+        target="_blank"
+        >Read more on Wikipedia</a>
+    ></small>
+
+    <br />
+    <button class="try-button">👉 Try a new coffee recipe!</button>
+    </div>
+
+    <script>
+        function tryCoffee() {
+            let name = prompt("What is your name?"); 
+            let email = prompt("What is your email address?"); 
+            let question = prompt("Would you like a cool coffee recipe emailed to you ☕️ ?"); 
+    
+            if (question === "Yes" || question === "yes") {
+                alert("Thank you" + " " + name + "! Check your inbox for today's recipe!");
+    
+            } else {
+                alert("No worries!");
+            }
+        }
+        let tryButton = document.querySelector(".try-button"); 
+        tryButton.addEventListener("click", tryCoffee); 
+    </script>
+</body>
+</html>
